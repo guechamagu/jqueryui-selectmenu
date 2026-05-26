@@ -1,0 +1,117 @@
+#ypfb-ductos-map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#ypfb-ductos-map {
+    height: 600px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+#ypfb-ductos-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#ypfb-ductos-info.hidden {
+    display: none;
+}
+
+#ypfb-ductos-message {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-left: 4px solid #0073aa;
+    line-height: 1.6;
+}
+
+#ypfb-ductos-list {
+    margin-top: 15px;
+}
+
+.ducto-item {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ducto-item:hover {
+    background-color: #f0f0f0;
+}
+
+.ducto-name {
+    font-weight: bold;
+    color: #0073aa;
+}
+
+.ducto-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.ducto-distance {
+    font-size: 0.85em;
+    color: #999;
+    margin-top: 5px;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 20px;
+}
+
+.loading-spinner::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0073aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.map-instructions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+}
+
+.error-message {
+    padding: 15px;
+    background-color: #ffebee;
+    border-left: 4px solid #f44336;
+    color: #c62828;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
